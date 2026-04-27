@@ -7,7 +7,7 @@ function statusClass(status) {
 function statusLabel(status) {
   if (status === "supporte") return "Statut: supporté";
   if (status === "partiel") return "Statut: support partiel";
-  return "Statut: non supporté nativement";
+  return "Statut: non supporté";
 }
 
 function buildBrandCard(item) {

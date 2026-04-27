@@ -334,12 +334,6 @@ thead th {
   color: #8f5b0f;
 }
 
-.hardware-intro {
-  margin: 0 0 1rem;
-  color: var(--muted);
-  max-width: 72ch;
-}
-
 .hardware-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -4,24 +4,12 @@
     {
       "nom": "Microsoft Surface",
       "statut": "non_supporte",
-      "note": "Pas d'option grand public clairement identifiée pour commander un Surface avec clavier physique AZERTY Amélioré pré-gravé à la configuration en ligne.",
-      "liens": [
-        {
-          "label": "Windows 11 (24H2)",
-          "url": "https://learn.microsoft.com/en-us/globalization/keyboards/azerty_french"
-        }
-      ]
+      "note": "Pas d'option grand public clairement identifiée pour commander un Surface avec marquage de touches AZERTY Amélioré pré-gravé."
     },
     {
       "nom": "MacBook",
       "statut": "non_supporte",
-      "note": "Pas d'option standard de commande en ligne avec clavier physique AZERTY Amélioré; la solution reste surtout logicielle.",
-      "liens": [
-        {
-          "label": "Pilote macOS (communautaire)",
-          "url": "https://github.com/cyril-L/french-nf-azerty-mac"
-        }
-      ]
+      "note": "Pas d'option standard de commande en ligne avec marquage de touches AZERTY Amélioré sur le clavier physique."
     },
     {
       "nom": "Chromebook",
@@ -30,6 +18,22 @@
     }
   ],
   "desktops": [
+    {
+      "nom": "INOVU",
+      "statut": "supporte",
+      "featured": true,
+      "note": "INOVU propose un clavier avec marquage de touches AZERTY Amélioré.",
+      "liens": [
+        {
+          "label": "Site du clavier",
+          "url": "https://www.inov-u.com/products/peripherique-pc/clavier/bw10-azerty-azerty-francais/"
+        },
+        {
+          "label": "Magasin Amazon",
+          "url": "https://www.amazon.fr/s?k=INOVU+BW10+AZERTY%2B"
+        }
+      ]
+    },
     {
       "nom": "Logitech",
       "statut": "non_supporte",
@@ -43,9 +47,8 @@
     },
     {
       "nom": "Cherry",
-      "statut": "partiel",
-      "programmable": true,
-      "note": "Certains modèles peuvent être adaptés par remappage logiciel, mais sans gravure native NF Z71-300.",
+      "statut": "non_supporte",
+      "note": "Aucune offre identifiée avec marquage de touches AZERTY Amélioré en standard.",
       "liens": [
         {
           "label": "Site Cherry",
@@ -55,9 +58,8 @@
     },
     {
       "nom": "Keychron",
-      "statut": "partiel",
-      "programmable": true,
-      "note": "Modèles QMK/VIA reconfigurables: utile pour adapter la saisie AZERTY Amélioré.",
+      "statut": "non_supporte",
+      "note": "Aucune offre identifiée avec marquage de touches AZERTY Amélioré en standard.",
       "liens": [
         {
           "label": "Site Keychron",
@@ -67,9 +69,8 @@
     },
     {
       "nom": "ZSA",
-      "statut": "partiel",
-      "programmable": true,
-      "note": "Claviers hautement programmables (QMK) pour construire une disposition compatible.",
+      "statut": "non_supporte",
+      "note": "Aucune offre identifiée avec marquage de touches AZERTY Amélioré en standard.",
       "liens": [
         {
           "label": "Site ZSA",
