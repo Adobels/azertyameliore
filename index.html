@@ -189,28 +189,40 @@
           <h2>Disponibilité sur les claviers physiques</h2>
         </div>
 
-        <div class="grid cards-4">
-          <article class="card brand-card">
-            <h3>Logitech</h3>
-            <p class="status no">Statut: non supporté nativement</p>
-            <p>Pas de gamme AZERTY Amélioré NF Z71-300 largement diffusée à ce jour.</p>
+        <p class="hardware-intro">
+          La liste est chargée depuis un fichier externe <code>data/claviers.json</code>. Après publication
+          du projet sur GitHub, la communauté pourra proposer des mises à jour via pull requests.
+          La disponibilité est évaluée selon le <strong>marquage des touches physiques</strong>.
+        </p>
+
+        <div class="hardware-columns">
+          <article class="hardware-group">
+            <h3>Pour les laptops</h3>
+            <p class="hardware-criteria">
+              Critère de support: possibilité de commander en ligne un laptop avec un clavier
+              physique AZERTY Amélioré lors de la configuration d’achat.
+            </p>
+            <div id="hardware-laptops" class="grid hardware-list"></div>
           </article>
-          <article class="card brand-card">
-            <h3>HP</h3>
-            <p class="status no">Statut: non supporté nativement</p>
-            <p>Le marquage des touches reste majoritairement sur la disposition AZERTY classique.</p>
-          </article>
-          <article class="card brand-card">
-            <h3>Dell</h3>
-            <p class="status no">Statut: non supporté nativement</p>
-            <p>Pas d’offre grand public identifiée avec gravure complète AZERTY Amélioré.</p>
-          </article>
-          <article class="card brand-card featured">
-            <h3>INOVU</h3>
-            <p class="status yes">Statut: supporté</p>
-            <p>Des modèles AZERTY+ conformes à la norme sont disponibles en catalogue.</p>
+
+          <article class="hardware-group">
+            <h3>Pour les ordinateurs de bureau</h3>
+            <p class="hardware-criteria">
+              Critère de support: disponibilité de claviers externes avec marquage des touches
+              conforme (ou très proche) de l’AZERTY Amélioré.
+            </p>
+            <div id="hardware-desktops" class="grid hardware-list"></div>
           </article>
         </div>
+
+        <p class="hardware-updated">
+          Dernière mise à jour de la liste: <span id="hardware-updated-at">—</span>
+        </p>
+        <noscript>
+          <p class="hardware-updated">
+            Activez JavaScript pour afficher la liste des claviers depuis le fichier JSON.
+          </p>
+        </noscript>
       </section>
 
       <section id="transition" class="section container transition">
@@ -245,5 +257,6 @@
         </p>
       </div>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>

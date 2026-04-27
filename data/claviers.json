@@ -1,0 +1,81 @@
+{
+  "mise_a_jour": "2026-04-27",
+  "laptops": [
+    {
+      "nom": "Microsoft Surface",
+      "statut": "non_supporte",
+      "note": "Pas d'option grand public clairement identifiée pour commander un Surface avec clavier physique AZERTY Amélioré pré-gravé à la configuration en ligne.",
+      "liens": [
+        {
+          "label": "Windows 11 (24H2)",
+          "url": "https://learn.microsoft.com/en-us/globalization/keyboards/azerty_french"
+        }
+      ]
+    },
+    {
+      "nom": "MacBook",
+      "statut": "non_supporte",
+      "note": "Pas d'option standard de commande en ligne avec clavier physique AZERTY Amélioré; la solution reste surtout logicielle.",
+      "liens": [
+        {
+          "label": "Pilote macOS (communautaire)",
+          "url": "https://github.com/cyril-L/french-nf-azerty-mac"
+        }
+      ]
+    },
+    {
+      "nom": "Chromebook",
+      "statut": "non_supporte",
+      "note": "Aucun support natif grand public identifié pour la disposition AZERTY Amélioré NF Z71-300."
+    }
+  ],
+  "desktops": [
+    {
+      "nom": "Logitech",
+      "statut": "non_supporte",
+      "note": "Pas de gamme de claviers avec marquage AZERTY Amélioré largement diffusée.",
+      "liens": [
+        {
+          "label": "Site Logitech",
+          "url": "https://www.logitech.com/fr-fr"
+        }
+      ]
+    },
+    {
+      "nom": "Cherry",
+      "statut": "partiel",
+      "programmable": true,
+      "note": "Certains modèles peuvent être adaptés par remappage logiciel, mais sans gravure native NF Z71-300.",
+      "liens": [
+        {
+          "label": "Site Cherry",
+          "url": "https://www.cherry-world.com/"
+        }
+      ]
+    },
+    {
+      "nom": "Keychron",
+      "statut": "partiel",
+      "programmable": true,
+      "note": "Modèles QMK/VIA reconfigurables: utile pour adapter la saisie AZERTY Amélioré.",
+      "liens": [
+        {
+          "label": "Site Keychron",
+          "url": "https://www.keychron.com/"
+        }
+      ]
+    },
+    {
+      "nom": "ZSA",
+      "statut": "partiel",
+      "programmable": true,
+      "note": "Claviers hautement programmables (QMK) pour construire une disposition compatible.",
+      "liens": [
+        {
+          "label": "Site ZSA",
+          "url": "https://www.zsa.io/"
+        }
+      ]
+    }
+  ]
+}
