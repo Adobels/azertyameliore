@@ -269,6 +269,38 @@ h2 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.cards-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.installation-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.install-group h3 {
+  margin-bottom: 0.8rem;
+}
+
+.install-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+.install-step {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 0.95rem 1rem;
+  box-shadow: var(--shadow);
+  color: var(--muted);
+}
+
 .benefits-list {
   margin: 0;
   padding: 0;
@@ -595,7 +627,8 @@ thead th {
 
 @media (max-width: 980px) {
   .cards-3,
-  .cards-4 {
+  .cards-4,
+  .cards-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -604,6 +637,10 @@ thead th {
   }
 
   .hardware-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .installation-columns {
     grid-template-columns: 1fr;
   }
 
@@ -622,7 +659,8 @@ thead th {
   }
 
   .cards-3,
-  .cards-4 {
+  .cards-4,
+  .cards-2 {
     grid-template-columns: 1fr;
   }
 
