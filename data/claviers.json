@@ -33,50 +33,6 @@
           "url": "https://www.amazon.fr/s?k=INOVU+BW10+AZERTY%2B"
         }
       ]
-    },
-    {
-      "nom": "Logitech",
-      "statut": "non_supporte",
-      "note": "Pas de gamme de claviers avec marquage AZERTY Amélioré largement diffusée.",
-      "liens": [
-        {
-          "label": "Site Logitech",
-          "url": "https://www.logitech.com/fr-fr"
-        }
-      ]
-    },
-    {
-      "nom": "Cherry",
-      "statut": "non_supporte",
-      "note": "Aucune offre identifiée avec marquage de touches AZERTY Amélioré en standard.",
-      "liens": [
-        {
-          "label": "Site Cherry",
-          "url": "https://www.cherry-world.com/"
-        }
-      ]
-    },
-    {
-      "nom": "Keychron",
-      "statut": "non_supporte",
-      "note": "Aucune offre identifiée avec marquage de touches AZERTY Amélioré en standard.",
-      "liens": [
-        {
-          "label": "Site Keychron",
-          "url": "https://www.keychron.com/"
-        }
-      ]
-    },
-    {
-      "nom": "ZSA",
-      "statut": "non_supporte",
-      "note": "Aucune offre identifiée avec marquage de touches AZERTY Amélioré en standard.",
-      "liens": [
-        {
-          "label": "Site ZSA",
-          "url": "https://www.zsa.io/"
-        }
-      ]
     }
   ]
 }
