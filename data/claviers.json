@@ -4,17 +4,17 @@
     {
       "nom": "Microsoft Surface",
       "statut": "non_supporte",
-      "note": "Pas d'option grand public clairement identifiée pour commander un Surface avec marquage de touches AZERTY Amélioré pré-gravé."
+      "note": "Pas d'option pour choisir un marquage AZERTY Amélioré au moment de la configuration d'un laptop sur le site du constructeur."
     },
     {
       "nom": "MacBook",
       "statut": "non_supporte",
-      "note": "Pas d'option standard de commande en ligne avec marquage de touches AZERTY Amélioré sur le clavier physique."
+      "note": "Pas d'option pour choisir un marquage AZERTY Amélioré au moment de la configuration d'un laptop sur le site du constructeur."
     },
     {
       "nom": "Chromebook",
       "statut": "non_supporte",
-      "note": "Aucun support natif grand public identifié pour la disposition AZERTY Amélioré NF Z71-300."
+      "note": "Pas d'option pour choisir un marquage AZERTY Amélioré au moment de la configuration d'un laptop sur le site du constructeur."
     }
   ],
   "desktops": [
