@@ -294,8 +294,41 @@ h2 {
   gap: 1rem;
 }
 
+.install-intro {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  max-width: 76ch;
+}
+
 .install-group h3 {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.18rem 0.5rem;
+  font-family: "IBM Plex Sans", "Trebuchet MS", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.status-badge.ok {
+  background: #def8e9;
+  color: #1f633f;
+  border: 1px solid #bde8ce;
+}
+
+.status-badge.warn {
+  background: #fff2da;
+  color: #7a4b00;
+  border: 1px solid #f3d2a1;
 }
 
 .install-steps {
@@ -328,6 +361,10 @@ h2 {
 
 .optional-tasks {
   margin-top: 1.1rem;
+}
+
+.optional-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .benefits-list {
@@ -669,6 +706,10 @@ thead th {
   }
 
   .installation-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .optional-grid {
     grid-template-columns: 1fr;
   }
 
