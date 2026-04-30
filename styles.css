@@ -712,22 +712,30 @@ thead th {
   padding: 1rem;
   position: sticky;
   top: 96px;
+  width: 280px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-card h3 {
   margin-bottom: 0.8rem;
   font-size: 1rem;
+  line-height: 1.15;
 }
 
 .contact-card a {
-  display: flex;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
   align-items: center;
   gap: 0.7rem;
   padding: 0.65rem 0;
   color: var(--ink);
+  font-family: "IBM Plex Sans", "Trebuchet MS", sans-serif;
+  font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
   border-top: 1px solid var(--line);
+  line-height: 1.2;
 }
 
 .contact-card a:first-of-type {
@@ -735,9 +743,13 @@ thead th {
 }
 
 .contact-card img {
-  width: 32px;
-  height: 32px;
+  display: block;
+  width: 32px !important;
+  height: 32px !important;
+  max-width: 32px;
+  max-height: 32px;
   flex: 0 0 auto;
+  object-fit: contain;
 }
 
 .site-footer {
@@ -795,6 +807,7 @@ thead th {
 
   .contact-card {
     position: static;
+    width: 100%;
   }
 
   .optional-grid {
