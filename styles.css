@@ -34,6 +34,21 @@ img {
   display: block;
 }
 
+a {
+  color: #0f6f4c;
+  text-underline-offset: 0.16em;
+}
+
+a:visited {
+  color: #6a4c93;
+}
+
+a:hover,
+a:focus-visible {
+  color: #0b4f38;
+  text-decoration-thickness: 0.12em;
+}
+
 code {
   font-family: "Courier New", monospace;
   background: #edf3ee;
@@ -415,11 +430,6 @@ h2 {
   background: var(--panel);
 }
 
-.inovu-showcase {
-  padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
-}
-
 .inovu-figure {
   margin: 0;
   border: 1px solid var(--line);
@@ -518,7 +528,7 @@ thead th {
 
 .hardware-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
@@ -532,6 +542,10 @@ thead th {
 .hardware-group h3 {
   margin-bottom: 0.9rem;
   font-size: 1.05rem;
+}
+
+.hardware-image {
+  margin-top: 1rem;
 }
 
 .hardware-criteria {
