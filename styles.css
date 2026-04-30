@@ -660,6 +660,26 @@ thead th {
   background: #fff;
 }
 
+.sticker-product {
+  margin-top: 1rem;
+}
+
+.sticker-product img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  background: var(--panel);
+}
+
+.sticker-product figcaption {
+  margin: 0;
+  padding: 0.85rem 1rem 1rem;
+  color: var(--muted);
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   margin-top: 2rem;
