@@ -680,6 +680,66 @@ thead th {
   font-size: 0.95rem;
 }
 
+.author-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.author-copy {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  padding: 1.15rem;
+}
+
+.author-copy p {
+  margin: 0 0 0.85rem;
+  color: var(--muted);
+}
+
+.author-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  position: sticky;
+  top: 96px;
+}
+
+.contact-card h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.contact-card a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.65rem 0;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  border-top: 1px solid var(--line);
+}
+
+.contact-card a:first-of-type {
+  border-top: 0;
+}
+
+.contact-card img {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   margin-top: 2rem;
@@ -727,6 +787,14 @@ thead th {
 
   .installation-columns {
     grid-template-columns: 1fr;
+  }
+
+  .author-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    position: static;
   }
 
   .optional-grid {
