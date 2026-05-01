@@ -766,6 +766,33 @@ thead th {
   color: var(--muted);
 }
 
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.45rem;
+}
+
+.language-switcher span {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.language-switcher a {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.32rem 0.7rem;
+}
+
 .small {
   font-size: 0.9rem;
   margin: 0;
