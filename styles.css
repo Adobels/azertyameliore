@@ -1,14 +1,14 @@
 :root {
-  --bg: #f5f7f2;
+  --bg: #f7f8f4;
   --panel: #ffffff;
-  --ink: #112215;
-  --muted: #495b4b;
-  --line: #d5e0d3;
-  --accent: #0f7b53;
-  --accent-2: #f2ac3f;
-  --danger: #ad3f2c;
+  --ink: #17324d;
+  --muted: #475569;
+  --line: #d7dde5;
+  --accent: #17324d;
+  --accent-2: #b33a3a;
+  --danger: #b33a3a;
   --radius: 18px;
-  --shadow: 0 10px 30px rgba(20, 40, 18, 0.08);
+  --shadow: 0 10px 30px rgba(23, 50, 77, 0.08);
 }
 
 * {
@@ -23,8 +23,8 @@ body {
   margin: 0;
   font-family: "IBM Plex Sans", "Trebuchet MS", sans-serif;
   color: var(--ink);
-  background: radial-gradient(circle at 10% 0%, #efffe8 0%, transparent 45%),
-    radial-gradient(circle at 100% 0%, #fff4df 0%, transparent 40%),
+  background: radial-gradient(circle at 10% 0%, #eef4fb 0%, transparent 45%),
+    radial-gradient(circle at 100% 0%, #fff1f1 0%, transparent 40%),
     var(--bg);
   line-height: 1.55;
 }
@@ -35,17 +35,17 @@ img {
 }
 
 a {
-  color: #0f6f4c;
+  color: #1d4f7a;
   text-underline-offset: 0.16em;
 }
 
 a:visited {
-  color: #6a4c93;
+  color: #7c3f58;
 }
 
 a:hover,
 a:focus-visible {
-  color: #0b4f38;
+  color: #b33a3a;
   text-decoration-thickness: 0.12em;
 }
 
@@ -79,20 +79,20 @@ code {
 .bg-glow-left {
   left: -100px;
   top: 120px;
-  background: #8ce4a8;
+  background: #b8d4ee;
 }
 
 .bg-glow-right {
   right: -80px;
   top: 360px;
-  background: #ffd79a;
+  background: #f1b7b7;
 }
 
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(245, 247, 242, 0.88);
-  border-bottom: 1px solid rgba(124, 143, 126, 0.25);
+  background: rgba(247, 248, 244, 0.88);
+  border-bottom: 1px solid rgba(23, 50, 77, 0.16);
   backdrop-filter: blur(9px);
   z-index: 10;
 }
@@ -208,9 +208,9 @@ h1 {
 }
 
 .btn-primary {
-  background: linear-gradient(120deg, #0f7b53 0%, #24986a 100%);
+  background: linear-gradient(120deg, #17324d 0%, #2f5f89 100%);
   color: #fff;
-  box-shadow: 0 10px 20px rgba(15, 123, 83, 0.25);
+  box-shadow: 0 10px 20px rgba(23, 50, 77, 0.25);
 }
 
 .btn-ghost {
@@ -320,15 +320,15 @@ h2 {
 }
 
 .status-badge.ok {
-  background: #def8e9;
-  color: #1f633f;
-  border: 1px solid #bde8ce;
+  background: #e4eef8;
+  color: #17324d;
+  border: 1px solid #bdd2e8;
 }
 
 .status-badge.warn {
-  background: #fff2da;
-  color: #7a4b00;
-  border: 1px solid #f3d2a1;
+  background: #fff0f0;
+  color: #8f2d2d;
+  border: 1px solid #e4b8b8;
 }
 
 .install-steps {
@@ -429,16 +429,16 @@ h2 {
 
 .problems-cells > li::before {
   content: "P" counter(item);
-  color: #6e3000;
-  background: #ffe9d9;
-  border: 1px solid #f2c8aa;
+  color: #8f2d2d;
+  background: #fff0f0;
+  border: 1px solid #e4b8b8;
 }
 
 .advantages-cells > li::before {
   content: "A" counter(item);
-  color: #1f633f;
-  background: #def8e9;
-  border: 1px solid #bde8ce;
+  color: #17324d;
+  background: #e4eef8;
+  border: 1px solid #bdd2e8;
 }
 
 .card {
@@ -537,13 +537,13 @@ thead th {
 }
 
 .pill.ok {
-  background: #def8e9;
-  color: #1f633f;
+  background: #e4eef8;
+  color: #17324d;
 }
 
 .pill.warn {
-  background: #fff2da;
-  color: #7a4b00;
+  background: #fff0f0;
+  color: #8f2d2d;
 }
 
 .brand-card .status {
@@ -560,7 +560,7 @@ thead th {
 }
 
 .brand-card .status.warn {
-  color: #8f5b0f;
+  color: #8f2d2d;
 }
 
 .hardware-columns {
@@ -628,20 +628,20 @@ thead th {
   text-decoration: none;
   font-weight: 700;
   font-size: 0.86rem;
-  color: #0f5d3f;
-  background: #e8f6ee;
-  border: 1px solid #b8dfc8;
+  color: #17324d;
+  background: #e4eef8;
+  border: 1px solid #bdd2e8;
   border-radius: 999px;
   padding: 0.35rem 0.65rem;
 }
 
 .brand-links a:hover {
-  background: #d7f0e3;
+  background: #d8e8f6;
 }
 
 .featured {
-  border-color: #79c79d;
-  background: linear-gradient(180deg, #fff 0%, #f3fff8 100%);
+  border-color: #9ebbd6;
+  background: linear-gradient(180deg, #fff 0%, #f3f7fb 100%);
 }
 
 .transition {
