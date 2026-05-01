@@ -460,7 +460,7 @@ h2 {
 }
 
 .table-wrap {
-  overflow-x: auto;
+  overflow-x: visible;
   border-radius: var(--radius);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
@@ -497,7 +497,7 @@ h2 {
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 720px;
+  min-width: 0;
 }
 
 th:nth-child(1),
@@ -832,6 +832,59 @@ thead th {
   .cards-4,
   .cards-2 {
     grid-template-columns: 1fr;
+  }
+
+  .table-wrap {
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  table,
+  thead,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody {
+    display: grid;
+    gap: 1rem;
+  }
+
+  tr {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  td {
+    border-bottom: 1px solid var(--line);
+    padding: 0.85rem 1rem;
+    white-space: normal;
+  }
+
+  td:last-child {
+    border-bottom: 0;
+  }
+
+  td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
 
   .nav-wrap {
