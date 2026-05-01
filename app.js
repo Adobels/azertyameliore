@@ -1,3 +1,73 @@
+const pageLang = document.documentElement.lang || "fr";
+
+const translations = {
+  fr: {
+    status: {
+      supporte: "Statut: supporté",
+      partiel: "Statut: support partiel",
+      non_supporte: "Statut: non supporté",
+    },
+    programmable: "Clavier programmable",
+    missingDate: "non renseignée",
+    loadError:
+      "Impossible de charger data/claviers.json. Vérifiez le fichier ou relancez le serveur local.",
+    loadErrorDate: "erreur de chargement",
+    notes: {
+      laptop:
+        "Pas d'option pour choisir un marquage AZERTY Amélioré au moment de la configuration d'un laptop sur le site du constructeur.",
+      inovu: "INOVU propose un clavier avec marquage de touches AZERTY Amélioré.",
+    },
+    links: {
+      "Site du clavier": "Site du clavier",
+      "Magasin Amazon": "Magasin Amazon",
+    },
+  },
+  en: {
+    status: {
+      supporte: "Status: supported",
+      partiel: "Status: partial support",
+      non_supporte: "Status: not supported",
+    },
+    programmable: "Programmable keyboard",
+    missingDate: "not specified",
+    loadError:
+      "Unable to load data/claviers.json. Check the file or restart the local server.",
+    loadErrorDate: "loading error",
+    notes: {
+      laptop:
+        "No option to choose AZERTY Improved key markings when configuring a laptop on the manufacturer's website.",
+      inovu: "INOVU offers a keyboard with AZERTY Improved key markings.",
+    },
+    links: {
+      "Site du clavier": "Keyboard page",
+      "Magasin Amazon": "Amazon store",
+    },
+  },
+  pl: {
+    status: {
+      supporte: "Status: obsługiwane",
+      partiel: "Status: częściowe wsparcie",
+      non_supporte: "Status: brak wsparcia",
+    },
+    programmable: "Klawiatura programowalna",
+    missingDate: "brak informacji",
+    loadError:
+      "Nie można wczytać data/claviers.json. Sprawdź plik albo uruchom ponownie lokalny serwer.",
+    loadErrorDate: "błąd wczytywania",
+    notes: {
+      laptop:
+        "Brak opcji wyboru oznaczeń klawiszy AZERTY Ulepszony podczas konfiguracji laptopa na stronie producenta.",
+      inovu: "INOVU oferuje klawiaturę z oznaczeniami klawiszy AZERTY Ulepszony.",
+    },
+    links: {
+      "Site du clavier": "Strona klawiatury",
+      "Magasin Amazon": "Sklep Amazon",
+    },
+  },
+};
+
+const copy = translations[pageLang] || translations.fr;
+
 function statusClass(status) {
   if (status === "supporte") return "yes";
   if (status === "partiel") return "warn";
@@ -5,9 +75,21 @@ function statusClass(status) {
 }
 
 function statusLabel(status) {
-  if (status === "supporte") return "Statut: supporté";
-  if (status === "partiel") return "Statut: support partiel";
-  return "Statut: non supporté";
+  return copy.status[status] || copy.status.non_supporte;
+}
+
+function noteLabel(item) {
+  if (["Microsoft Surface", "MacBook", "Chromebook"].includes(item.nom)) {
+    return copy.notes.laptop;
+  }
+  if (item.nom === "INOVU") {
+    return copy.notes.inovu;
+  }
+  return item.note;
+}
+
+function linkLabel(label) {
+  return copy.links[label] || label;
 }
 
 function buildBrandCard(item) {
@@ -22,14 +104,14 @@ function buildBrandCard(item) {
   status.textContent = statusLabel(item.statut);
 
   const note = document.createElement("p");
-  note.textContent = item.note;
+  note.textContent = noteLabel(item);
 
   card.append(title, status, note);
 
   if (item.programmable) {
     const programmable = document.createElement("span");
     programmable.className = "tag-programmable";
-    programmable.textContent = "Clavier programmable";
+    programmable.textContent = copy.programmable;
     card.appendChild(programmable);
   }
 
@@ -40,7 +122,7 @@ function buildBrandCard(item) {
     item.liens.forEach((entry) => {
       const anchor = document.createElement("a");
       anchor.href = entry.url;
-      anchor.textContent = entry.label;
+      anchor.textContent = linkLabel(entry.label);
       anchor.target = "_blank";
       anchor.rel = "noopener noreferrer";
       links.appendChild(anchor);
@@ -60,7 +142,8 @@ function renderList(containerId, list) {
 
 async function loadHardware() {
   try {
-    const response = await fetch("data/claviers.json", { cache: "no-store" });
+    const dataPath = pageLang === "fr" ? "data/claviers.json" : "../data/claviers.json";
+    const response = await fetch(dataPath, { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
@@ -70,18 +153,17 @@ async function loadHardware() {
     renderList("hardware-desktops", data.desktops);
 
     const updatedAt = document.getElementById("hardware-updated-at");
-    updatedAt.textContent = data.mise_a_jour || "non renseignée";
+    updatedAt.textContent = data.mise_a_jour || copy.missingDate;
   } catch (error) {
     const laptops = document.getElementById("hardware-laptops");
     const desktops = document.getElementById("hardware-desktops");
-    const message =
-      "Impossible de charger data/claviers.json. Vérifiez le fichier ou relancez le serveur local.";
+    const message = copy.loadError;
 
     laptops.innerHTML = `<article class="card brand-card"><p class="status no">${message}</p></article>`;
     desktops.innerHTML = `<article class="card brand-card"><p class="status no">${message}</p></article>`;
 
     const updatedAt = document.getElementById("hardware-updated-at");
-    updatedAt.textContent = "erreur de chargement";
+    updatedAt.textContent = copy.loadErrorDate;
     console.error(error);
   }
 }
