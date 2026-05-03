@@ -688,11 +688,7 @@ thead th {
 }
 
 .author-copy {
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--panel);
-  box-shadow: var(--shadow);
-  padding: 1.15rem;
+  max-width: 78ch;
 }
 
 .author-copy p {
