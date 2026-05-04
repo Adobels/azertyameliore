@@ -136,11 +136,18 @@ function buildBrandCard(item) {
 
 function renderList(containerId, list) {
   const container = document.getElementById(containerId);
+  if (!container) return;
   container.textContent = "";
   list.forEach((item) => container.appendChild(buildBrandCard(item)));
 }
 
 async function loadHardware() {
+  const laptops = document.getElementById("hardware-laptops");
+  const desktops = document.getElementById("hardware-desktops");
+  const updatedAt = document.getElementById("hardware-updated-at");
+
+  if (!laptops && !desktops && !updatedAt) return;
+
   try {
     const dataPath = pageLang === "fr" ? "data/claviers.json" : "../data/claviers.json";
     const response = await fetch(dataPath, { cache: "no-store" });
@@ -152,18 +159,18 @@ async function loadHardware() {
     renderList("hardware-laptops", data.laptops);
     renderList("hardware-desktops", data.desktops);
 
-    const updatedAt = document.getElementById("hardware-updated-at");
-    updatedAt.textContent = data.mise_a_jour || copy.missingDate;
+    if (updatedAt) updatedAt.textContent = data.mise_a_jour || copy.missingDate;
   } catch (error) {
-    const laptops = document.getElementById("hardware-laptops");
-    const desktops = document.getElementById("hardware-desktops");
     const message = copy.loadError;
 
-    laptops.innerHTML = `<article class="card brand-card"><p class="status no">${message}</p></article>`;
-    desktops.innerHTML = `<article class="card brand-card"><p class="status no">${message}</p></article>`;
+    if (laptops) {
+      laptops.innerHTML = `<article class="card brand-card"><p class="status no">${message}</p></article>`;
+    }
+    if (desktops) {
+      desktops.innerHTML = `<article class="card brand-card"><p class="status no">${message}</p></article>`;
+    }
 
-    const updatedAt = document.getElementById("hardware-updated-at");
-    updatedAt.textContent = copy.loadErrorDate;
+    if (updatedAt) updatedAt.textContent = copy.loadErrorDate;
     console.error(error);
   }
 }

@@ -79,7 +79,6 @@
           <a href="#chronologie">Chronologie</a>
           <a href="#avantages">Avantages</a>
           <a href="#installation">Installation</a>
-          <a href="#comparaison">Systèmes</a>
           <a href="#materiel">Matériel</a>
           <a href="#carte-des-touches">Touches</a>
           <a href="#transition">Autocollants</a>
@@ -193,7 +192,7 @@
             <div>
               <h3>Support natif Microsoft</h3>
               <p>
-                La disposition normalisée française est intégrée officiellement dans Windows 11 à
+                La disposition normalisée française est intégrée officiellement dans Windows 11 version 24H2 à
                 partir du 1er octobre 2024.
               </p>
             </div>
@@ -248,9 +247,11 @@
             <p class="install-separator">Étapes obligatoires</p>
             <ol class="install-steps">
               <li class="install-step">
-                Le clavier AZERTY Amélioré est déjà inclus dans Windows sous le nom
+                Depuis Windows 11 version 24H2, le clavier AZERTY Amélioré est inclus sous le nom
                 <strong>AZERTY Standard</strong> (ancien: <strong>Traditionnel</strong>). Il suffit de
                 sélectionner la disposition <strong>AZERTY Standard</strong> dans les paramètres clavier.
+                Pour les versions précédentes de Windows, installez une disposition AZERTY Amélioré
+                fournie par la communauté.
               </li>
             </ol>
           </article>
@@ -267,6 +268,17 @@
               </li>
             </ol>
           </article>
+
+          <article class="install-group">
+            <h3>Linux Ubuntu <span class="status-badge warn">Installation manuelle</span></h3>
+            <p class="install-separator">Étapes obligatoires</p>
+            <ol class="install-steps">
+              <li class="install-step">
+                Installer une disposition AZERTY Amélioré fournie par la communauté, puis la
+                sélectionner dans les paramètres clavier d’Ubuntu.
+              </li>
+            </ol>
+          </article>
         </div>
 
         <div class="optional-tasks">
@@ -277,7 +289,7 @@
               rapidement les nouvelles touches.
             </li>
             <li class="install-step">
-              Acheter un clavier externe AZERTY Amélioré.
+              Acheter un clavier externe AZERTY Amélioré, comme INOVU BW10™.
             </li>
             <li class="install-step">
               Acheter et coller les <a href="#transition">autocollants</a> sur le clavier du laptop,
@@ -287,146 +299,73 @@
         </div>
       </section>
 
-      <section id="comparaison" class="section container">
-        <div class="section-head">
-          <p class="eyebrow">Compatibilité</p>
-          <h2>Comparaison par système</h2>
-        </div>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Système</th>
-                <th>Statut</th>
-                <th>Détails</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Système">Windows</td>
-                <td data-label="Statut"><span class="pill ok">Officiel</span></td>
-                <td data-label="Détails">
-                  Support natif à partir de <strong>Windows 11, version 24H2</strong>. Sur les versions plus
-                  anciennes, des pilotes tiers peuvent être utilisés.
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Système">macOS</td>
-                <td data-label="Statut"><span class="pill warn">Non officiel</span></td>
-                <td data-label="Détails">
-                  Installation possible avec des fichiers fournis par la communauté. Voir le repo
-                  <a href="https://github.com/Adobels/azerty_macos" target="_blank" rel="noopener noreferrer">azerty_macos</a>.
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Système">Linux / Unix</td>
-                <td data-label="Statut"><span class="pill warn">Non officiel</span></td>
-                <td data-label="Détails">
-                  Installation possible avec des fichiers fournis par la communauté.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
       <section id="materiel" class="section container">
         <div class="section-head">
           <p class="eyebrow">Matériel</p>
           <h2>Disponibilité sur les claviers physiques</h2>
         </div>
         <p class="hardware-criteria">
-          Dans cette section, la disponibilité signifie que le clavier possède un
-          <strong>marquage de touches AZERTY Amélioré</strong>. Pour les laptops, le critère de
-          support est la possibilité de commander en ligne un laptop avec un clavier
-          physique AZERTY Amélioré lors de la configuration d’achat.
+          La meilleure façon d’utiliser l’AZERTY Amélioré est d’avoir un clavier avec des
+          imprimés qui correspondent à la disposition. Après la sélection du clavier AZERTY
+          Amélioré dans les réglages du système, quelques touches ne retourneront pas ce qui
+          est imprimé sur les touches de votre clavier actuel. Aujourd’hui, le clavier disponible
+          sur le marché, et probablement le seul disponible en 2026, est INOVU BW10™, qui rendra
+          le travail avec ce dispositif plus facile.
         </p>
 
-        <div class="hardware-columns">
-          <article class="hardware-group">
-            <h3>Claviers de laptops</h3>
-            <div id="hardware-laptops" class="grid hardware-list"></div>
-          </article>
-
-          <article class="hardware-group">
-            <h3>Claviers externes</h3>
-            <div id="hardware-desktops" class="grid hardware-list"></div>
-            <figure class="inovu-figure hardware-image">
-              <img src="assets/INOVU Premier clavier AZERTY Amerliore.cut.png" alt="INOVU BW10 (marque déposée INOVU) - image utilisée avec mention de droits EI Blazej SLEBODA." />
-              <figcaption>INOVU BW10™ - Le clavier AZERTY Amélioré le plus populaire à acheter en ligne en 2026, et probablement le seul modèle dédié disponible cette année-là.</figcaption>
-            </figure>
-          </article>
-        </div>
-
-        <p class="hardware-updated">
-          Dernière mise à jour de la liste: <span id="hardware-updated-at">—</span>
-        </p>
-        <p class="hardware-updated">
-          Vous connaissez un nouveau clavier AZERTY Amélioré? Représentants de marques et
-          utilisateurs peuvent proposer une mise à jour via pull request sur
-          <a href="https://github.com/Adobels/azertyameliore" target="_blank" rel="noopener noreferrer">GitHub</a>.
-        </p>
-        <noscript>
-          <p class="hardware-updated">
-            Activez JavaScript pour afficher la liste des claviers depuis le fichier JSON.
-          </p>
-        </noscript>
+        <figure class="inovu-figure hardware-image">
+          <img src="assets/INOVU Premier clavier AZERTY Amerliore.cut.png" alt="INOVU BW10 (marque déposée INOVU) - image utilisée avec mention de droits EI Blazej SLEBODA." />
+        </figure>
       </section>
 
       <section id="carte-des-touches" class="section container">
         <div class="section-head">
           <p class="eyebrow">Repères visuels</p>
           <h2>Carte des touches</h2>
+          <p class="section-subtitle">
+            Pour avoir une première impression du nouveau clavier, il est utile d’imprimer la carte
+            des touches. Elle aide à retrouver les symboles qui ont été placés à d’autres endroits;
+            avec le temps, tout sera mémorisé.
+          </p>
         </div>
 
-        <div class="grid cards-2">
-          <figure class="sticker-figure">
-            <img src="assets/azerty_main_layout.png" alt="Carte principale des touches AZERTY Amélioré" />
-          </figure>
-
-          <article class="card">
-            <h3>Comment lire chaque touche</h3>
-            <p>Sur la carte, les symboles d’une touche sont organisés ainsi:</p>
-            <p>
-              En bas à gauche: symbole de base. En haut à gauche: symbole avec Maj. En bas à droite:
-              symbole avec Option (Alt). En haut à droite: symbole avec Option + Maj.
-            </p>
-            <p>
-              Gardez cette carte imprimée pendant la transition pour mémoriser rapidement les
-              caractères et raccourcis de saisie.
-            </p>
-          </article>
+        <figure class="sticker-figure keymap-figure">
+          <img src="assets/keyboard-layout-full.png" alt="Carte complète des touches AZERTY Amélioré" />
+        </figure>
+        <div class="keymap-actions">
+          <a class="btn btn-primary" href="assets/azerty-ameliore-keyboard-layout.pdf" download>Télécharger la carte en PDF</a>
         </div>
       </section>
 
       <section id="transition" class="section container">
         <div>
           <p class="eyebrow">Transition pratique</p>
-          <h2>Passer à l’AZERTY Amélioré avec des autocollants</h2>
+          <h2>Autocollants</h2>
           <p>
-            Le support matériel natif reste encore limité. En attendant une offre plus large,
-            les <strong>autocollants de touches</strong> permettent de migrer rapidement, sans changer de clavier.
+            Les claviers avec marquage AZERTY Amélioré sont encore rares. Une fois ce nouveau
+            dispositif testé, la carte des touches aide beaucoup, mais on se trompe encore,
+            spécialement sur les touches où l’on cherche un symbole visuellement.
           </p>
           <p>
-            Cette solution fonctionne pour les <strong>claviers de laptop</strong> et pour les
-            <strong>claviers externes</strong>.
+            Pour éviter cela, il existe une solution simple: les autocollants. Collez uniquement
+            les repères nécessaires, puis ajoutez d’autres autocollants au fil des besoins sur
+            votre clavier. Le set contient toutes les lettres et tous les symboles utiles pour
+            adapter un clavier non conforme au nouvel AZERTY, y compris un clavier avec des
+            imprimés d’une langue non basée sur l’alphabet latin, comme le russe.
           </p>
           <figure class="sticker-figure sticker-product">
             <img src="assets/azerty_ameliore_autocollants.jpg" alt="Autocollants AZERTY Amélioré, aussi recherchés comme AZERTY+, AZERTY Plus ou Nouvel AZERTY" />
-            <figcaption>
-              Pour en trouver, cherchez aussi les synonymes utilisés par les vendeurs:
-              <strong>autocollant AZERTY Amélioré</strong>, <strong>AZERTY+</strong>,
-              <strong>AZERTY Plus</strong> ou <strong>Nouvel AZERTY</strong>.
-            </figcaption>
           </figure>
+          <div class="keymap-actions sticker-actions">
+            <a class="btn btn-primary" href="https://azerty.expert" target="_blank" rel="noopener noreferrer">Acheter des autocollants</a>
+          </div>
         </div>
       </section>
 
       <section id="auteur" class="section container author-section">
         <div class="section-head">
-          <p class="eyebrow">Auteur &amp; contact</p>
-          <h2>Auteur &amp; contact</h2>
+          <p class="eyebrow">Auteur &amp; Contact</p>
+          <h2>Auteur &amp; Contact</h2>
         </div>
 
         <div class="author-layout">

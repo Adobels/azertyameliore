@@ -290,7 +290,7 @@ h2 {
 
 .installation-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -469,29 +469,20 @@ h2 {
 
 .inovu-figure {
   margin: 0;
-  border: 1px solid var(--line);
-  border-radius: calc(var(--radius) + 6px);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  background: var(--panel);
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  background: transparent;
 }
 
 .inovu-figure img {
   width: 100%;
-  height: clamp(220px, 28vw, 360px);
+  height: auto;
   object-fit: contain;
   object-position: center;
   display: block;
-  background: var(--panel);
-}
-
-.inovu-figure figcaption {
-  margin: 0;
-  padding: 0.85rem 1rem 1rem;
-  color: var(--muted);
-  background: #fff;
-  border-top: 1px solid var(--line);
-  font-size: 0.95rem;
+  background: transparent;
 }
 
 table {
@@ -662,22 +653,41 @@ thead th {
 
 .sticker-product {
   margin-top: 1rem;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  overflow: visible;
 }
 
 .sticker-product img {
+  display: block;
   width: 100%;
-  max-height: 420px;
-  object-fit: contain;
-  background: var(--panel);
+  height: auto;
+  max-height: none;
+  object-fit: cover;
+  background: transparent;
 }
 
 .sticker-product figcaption {
   margin: 0;
-  padding: 0.85rem 1rem 1rem;
+  padding: 0.85rem 0 0;
   color: var(--muted);
-  background: var(--panel);
-  border-top: 1px solid var(--line);
+  background: transparent;
+  border-top: 0;
   font-size: 0.95rem;
+}
+
+.keymap-figure img {
+  width: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+.keymap-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
 .author-layout {
