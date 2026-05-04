@@ -359,14 +359,6 @@ h2 {
   text-transform: uppercase;
 }
 
-.optional-tasks {
-  margin-top: 1.1rem;
-}
-
-.optional-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .benefits-list {
   margin: 0;
   padding: 0;
@@ -653,29 +645,12 @@ thead th {
 
 .sticker-product {
   margin-top: 1rem;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  background: transparent;
-  overflow: visible;
 }
 
 .sticker-product img {
-  display: block;
   width: 100%;
-  height: auto;
   max-height: none;
-  object-fit: cover;
-  background: transparent;
-}
-
-.sticker-product figcaption {
-  margin: 0;
-  padding: 0.85rem 0 0;
-  color: var(--muted);
-  background: transparent;
-  border-top: 0;
-  font-size: 0.95rem;
+  object-fit: contain;
 }
 
 .keymap-figure img {
@@ -831,7 +806,7 @@ thead th {
   }
 
   .installation-columns {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .author-layout {
@@ -843,11 +818,13 @@ thead th {
     width: 100%;
   }
 
-  .optional-grid {
+  .transition {
     grid-template-columns: 1fr;
   }
+}
 
-  .transition {
+@media (max-width: 760px) {
+  .installation-columns {
     grid-template-columns: 1fr;
   }
 }
